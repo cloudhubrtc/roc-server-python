@@ -7,21 +7,15 @@ import string
 class Token:
     token = ''
     timestamp = 0
-    user_account = ''
-    role = ''
 
-    def __init__(self, token, timestamp, user_account, role):
+    def __init__(self, token, timestamp):
         self.token = token
         self.timestamp = timestamp
-        self.user_account = user_account
-        self.role = role
 
     def get_base64_str(self):
         data = {
             'token': self.token,
-            'timestamp': self.timestamp,
-            'useraccount': self.user_account,
-            'role': self.role
+            'timestamp': self.timestamp
         }
 
         json_encode = json.dumps(data, separators=(',', ':')).encode(encoding='utf-8')

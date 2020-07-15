@@ -31,7 +31,5 @@ class Client:
         encode_all = all_hl.hexdigest()
 
         # create token
-        token = Token(encode_all, expire_time, 'reserve', 'reserve')
-        auth_token = token.get_base64_str() + get_random_str(16)
-
-        return auth_token
+        token = Token(encode_all, expire_time)
+        return token.get_base64_str() + get_random_str(16)
