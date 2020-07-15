@@ -1,7 +1,7 @@
-# main.py
+# coding=utf-8
 
-from cor.token import Token
 from cor.client import Client
+from cor.token import Token
 
 auth_key = 'Wbyk*****Q8pwd3'
 secret_key = '234****3sdfsfs'
